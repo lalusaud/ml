@@ -1,2 +1,2 @@
-# ml
-Machine Learning Examples
+# Machine Learning
+Contains various Machine Learning Examples.
