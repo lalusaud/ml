@@ -1,2 +1,5 @@
 # Machine Learning
-Contains various Machine Learning Examples.
+This repo contains various Machine Learning Examples in Ruby.
+
+Try them in Binder here:
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/lalusaud/ml/master)
