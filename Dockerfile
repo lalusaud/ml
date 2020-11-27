@@ -6,7 +6,7 @@ RUN rm *.ipynb
 
 # Copy your notebooks
 COPY ./simple_linear_regression/SimpleLinearRegression-Ruby.ipynb ./
-COPY ./multiple_linear_regresion/LinearRegression-Riby.ipynb ./
+COPY ./multiple_linear_regresion/LinearRegression-Ruby.ipynb ./
 
 # The rest is specific to Binder
 ARG NB_USER
