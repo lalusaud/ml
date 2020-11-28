@@ -4,6 +4,7 @@ FROM ankane/ml-stack:standard
 # Remove example notebooks
 RUN rm *.ipynb
 
+COPY ./Gemfile ./
 RUN bundle install
 
 # Copy your notebooks
