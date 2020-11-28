@@ -5,7 +5,7 @@ FROM ankane/ml-stack:standard
 RUN rm *.ipynb
 
 COPY Gemfile* ./
-RUN gem install bundler && bundle install
+RUN apt-get install libopenblas-dev && gem install bundler && bundle install
 
 # Copy your notebooks
 COPY ./simple_linear_regression/* ./simple_linear_regression/
