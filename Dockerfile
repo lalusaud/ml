@@ -4,6 +4,8 @@ FROM ankane/ml-stack:standard
 # Remove example notebooks
 RUN rm *.ipynb
 
+RUN gem install numo-gnuplot
+
 # Copy your notebooks
 COPY ./simple_linear_regression/SimpleLinearRegression-Ruby.ipynb ./
 COPY ./multiple_linear_regression/LinearRegression-Ruby.ipynb ./
