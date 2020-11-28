@@ -4,8 +4,11 @@ FROM ankane/ml-stack:standard
 # Remove example notebooks
 RUN rm *.ipynb
 
+RUN apt-get update && apt-get install -y --no-install-recommends \
+  libopenblas-dev
+
 COPY Gemfile* ./
-RUN apt-get install libopenblas-dev && gem install bundler && bundle install
+RUN gem install bundler && bundle install
 
 # Copy your notebooks
 COPY ./simple_linear_regression/* ./simple_linear_regression/
