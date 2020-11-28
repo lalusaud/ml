@@ -5,7 +5,7 @@ FROM ankane/ml-stack:standard
 RUN rm *.ipynb
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-  libopenblas-dev
+  libopenblas-base
 
 COPY Gemfile* ./
 RUN gem install bundler && bundle install
