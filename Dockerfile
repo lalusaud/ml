@@ -4,12 +4,12 @@ FROM ankane/ml-stack:standard
 # Remove example notebooks
 RUN rm *.ipynb
 
-COPY ./Gemfile ./
-RUN bundle install
+COPY Gemfile* ./
+RUN gem install bundler && bundle install
 
 # Copy your notebooks
-COPY ./simple_linear_regression/SimpleLinearRegression-Ruby.ipynb ./
-COPY ./multiple_linear_regression/LinearRegression-Ruby.ipynb ./
+COPY ./simple_linear_regression/* ./simple_linear_regression/
+COPY ./multiple_linear_regression/* ./multiple_linear_regression/
 
 # The rest is specific to Binder
 ARG NB_USER
